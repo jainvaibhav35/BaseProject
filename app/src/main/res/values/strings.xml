@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">BaseProject</string>
+    <string name="click_action">Item Clicked</string>
+    <string name="refresh">Refresh</string>
+    <string name="settings">Settings</string>
+    <string name="drawer_open">DrawerOpen</string>
+    <string name="drawer_close">DrawerClose</string>
+    <string name="click_here">Click Here</string>
+    <string name="success_created">Successfully Created</string>
+    <string name="failed">failed</string>
+    <string name="update">Update</string>
+    <string name="want_to_update">Want to Update </string>
+    <string name="GPlus">GPlus
+    </string>
+    <string name="Facebook">Facebook</string>
+    <string name="twitter">Twitter</string>
+    <string name="linkedIn">LinkedIn</string>
+    <string name="insert">Insert</string>
+    <string name="fetch">Fetch</string>
+    <string name="enter_name">Enter Your Name</string>
+    <string name="fb_app_id">1023268047794103</string>
+    <string name="delete">Delete</string>
+    <string name="click_to_get_api_hit">click to get api hit</string>
+
+
+</resources>

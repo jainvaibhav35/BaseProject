@@ -1,0 +1,27 @@
+apply plugin: 'java'
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.sparkpost:sparkpost-lib:0.16.1'
+    compile files('libs/commons-codec-1.9.jar')
+    compile files('libs/poi-3.11-beta2.jar')
+    compile files('libs/poi-ooxml-3.11-beta2.jar')
+    compile files('libs/poi-ooxml-schemas-3.11-beta2.jar')
+    compile files('libs/stax-api-1.0.1.jar')
+    compile files('libs/xmlbeans-2.6.0.jar')
+    compile files('libs/com.mysql.jdbc_5.1.5.jar')
+}
+
+task deleteJar(type: Delete) {
+    delete 'libs/email.jar'
+}
+
+task createJar(type: Copy) {
+    from('build/intermediates/bundles/release/')
+    into('libs/')
+    include('classes.jar')
+    rename('classes.jar', 'email.jar')
+}
+
+createJar.dependsOn(deleteJar
+        , build)

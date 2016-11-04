@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="baseproject.com.activity">
+
+    <application
+        android:name="baseproject.com.application"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/MyCustomTheme">
+
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <!-- A string that specifies the generic action to perform i.e used for
+                broadcast it will match the action and will call onReceive method-->
+                <action android:name="android.intent.action.MAIN" />
+                <!-- A string containing additional information about the kind of
+                component that should handle the intent.-->
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/fb_app_id" />
+
+
+        <!-- Two receiver with same actions will call both java classes -->
+
+        <receiver android:name="baseproject.com.receivers.CustomReceivers">
+
+            <intent-filter>
+                <action android:name="abc" />
+                <action android:name="def" />
+            </intent-filter>
+
+        </receiver>
+
+
+        <receiver android:name="baseproject.com.receivers.SecondCustomReceivers">
+
+            <intent-filter>
+                <action android:name="abc" />
+            </intent-filter>
+
+        </receiver>
+
+
+    </application>
+
+</manifest>

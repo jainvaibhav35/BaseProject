@@ -39,17 +39,19 @@ public class MainActivity extends AppCompatActivity implements DrawerFragment.Fr
     private DrawerLayout mDrawerLayout;
     private Fragment mFragment;
     private String title;
-    
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         initViews();
-
+        Log.e("onCreate ", "onCreate called");
         showBadgeCount(2);
 
         mToolbar.setTitle(TAG);
+
+
         mToolbar.setTitleTextColor(getResources().getColor(R.color.white));
         setSupportActionBar(mToolbar);
         getSupportActionBar().setDisplayShowHomeEnabled(false);
@@ -228,8 +230,26 @@ public class MainActivity extends AppCompatActivity implements DrawerFragment.Fr
     }
 
     @Override
+    protected void onStop() {
+        super.onStop();
+        Log.e("onStop ", "onStop called");
+    }
+
+    @Override
     protected void onResume() {
         super.onResume();
         Log.e("onResume ", "onResume called");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.e("onDestroy ", "onDestroy called");
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        Log.e("onSaveInstanceState ", "onSaveInstanceState called");
     }
 }

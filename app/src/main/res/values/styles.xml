@@ -22,7 +22,7 @@
 
     <!-- Theme for toolbar normal theme -->
 
-    <style name="ToolbarCustomTheme" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <style name="ToolbarCustomTheme" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
         <item name="windowNoTitle">true</item>
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>

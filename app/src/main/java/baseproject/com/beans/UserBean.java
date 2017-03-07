@@ -6,9 +6,9 @@ package baseproject.com.beans;
 
 public class UserBean {
 
-    private int Id;
-    private String FName;
-    private String SName;
+    private int Id = 1;
+    private String FName = "Vaivha";
+    private String SName = "abhjsd";
 
     public UserBean() {
     }

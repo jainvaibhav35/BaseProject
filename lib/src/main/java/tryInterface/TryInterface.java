@@ -9,6 +9,6 @@ public class TryInterface implements B.ABC {
 
     @Override
     public void fun() {
-        System.out.print("Callback");
+        System.out.println("Callback");
     }
 }

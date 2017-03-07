@@ -6,16 +6,19 @@ package com.mail;
 
 public class StaticOverloading {
 
+    public static void fun(int a) {
 
-    public static void fun(){
-
-    }
-
-    public static void fun(int a){
+        System.out.print("Value is " + a);
 
     }
 
-    public static void main(){
+    public static void main(String arg[]) {
 
+        new StaticOverloading().fun();
+        new StaticOverloading().fun(1);
+    }
+
+    public void fun() {
+        System.out.print("Value is ");
     }
 }

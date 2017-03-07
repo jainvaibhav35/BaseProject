@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+
+The layout tag tells Android Studio that this layout should take the extra
+ processing during compilation time to find all the interesting Views
+ and note them for the next step.
+ All layouts without that outer layout tag will not get the
+ extra processing step, so you can sprinkle these into
+ new projects wherever you like without changing anything in the
+ rest of your application.
+
+
+-->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <data>
+
+        <variable
+            name="user"
+            type="baseproject.com.beans.UserBean" />
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/ll_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@{user.SName}"
+            android:layout_gravity="center|center_vertical" />
+
+    </RelativeLayout>
+</layout>

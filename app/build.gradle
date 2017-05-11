@@ -34,7 +34,14 @@ android {
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
+
+    // for junit -- used for simple java code . not for android dependencies
     testCompile 'junit:junit:4.12'
+
+    // for mockito -- used for test cases having android platform dependencies
+    testCompile 'org.mockito:mockito-core:1.10.19'
+
+
     androidTestCompile 'com.android.support:support-annotations:25.0.0'
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'

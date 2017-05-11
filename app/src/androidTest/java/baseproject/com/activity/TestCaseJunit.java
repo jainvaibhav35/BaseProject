@@ -1,4 +1,4 @@
-package baseproject.com.activity.util;
+package baseproject.com.activity;
 
 import org.junit.Test;
 
